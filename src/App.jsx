@@ -3,6 +3,7 @@ import "./App.css";
 import { getInitialData } from "./utils/index";
 import Navbar from "./components/Navbar";
 import NoteBody from "./components/NoteBody";
+import Footer from "./components/Footer";
 
 const App = () => {
 	const [notes, setNotes] = useState(getInitialData());
@@ -50,6 +51,7 @@ const App = () => {
 				onDeleteNote={onDeleteNoteHandler}
 				onArchiveNote={onArchiveNoteHandler}
 			/>
+			<Footer />
 		</div>
 	);
 };

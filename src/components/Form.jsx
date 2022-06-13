@@ -16,6 +16,7 @@ const Form = ({ addNote }) => {
 
 	const onSubmitHandler = (event) => {
 		event.preventDefault();
+
 		const newNote = { title, body };
 		addNote(newNote);
 		setTitle("");
@@ -33,6 +34,7 @@ const Form = ({ addNote }) => {
 					placeholder="fill the title..."
 					value={title}
 					onChange={onTitleChangeHandler}
+					required
 				/>
 				<textarea
 					className="bg-transparent border border-slate-400 rounded-sm p-3 my-3	w-full"
@@ -43,6 +45,7 @@ const Form = ({ addNote }) => {
 					placeholder="fill the note..."
 					value={body}
 					onChange={onBodyChangeHandler}
+					required
 				/>
 				<button
 					type="submit"
