@@ -10,7 +10,7 @@ const NoteContent = ({ title, createdAt, body }) => {
 			<p className="note-item__date text-xs text-slate-400 mb-2">
 				{showFormattedDate(createdAt)}
 			</p>
-			<p className="note-item__body text-sm min-h-[175px]">{body}</p>
+			<p className="note-item__body text-sm min-h-[185px]">{body}</p>
 		</div>
 	);
 };
