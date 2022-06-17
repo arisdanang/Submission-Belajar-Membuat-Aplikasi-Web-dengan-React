@@ -1,12 +1,15 @@
 import React from "react";
+import { UseNoteContext } from "../context/NoteContext";
 
-const Button = ({ type, id, onArchiveNote, onDeleteNote }) => {
+const Button = ({ type, id }) => {
+	const { onArchiveNoteHandler, onDeleteNoteHandler } = UseNoteContext();
+
 	return (
 		<>
 			{type === "delete" && (
 				<button
 					className="note-item__delete-button w-full py-2 border-r border-t text-red-500 font-bold"
-					onClick={() => onDeleteNote(id)}
+					onClick={() => onDeleteNoteHandler(id)}
 				>
 					Delete
 				</button>
@@ -14,8 +17,8 @@ const Button = ({ type, id, onArchiveNote, onDeleteNote }) => {
 
 			{type === "archive" && (
 				<button
-					className="note-item__archive-button w-full py-2 border-r border-t text-yellow-300 font-bold"
-					onClick={() => onArchiveNote(id)}
+					className="note-item__archive-button w-full py-2  border-t text-yellow-300 font-bold"
+					onClick={() => onArchiveNoteHandler(id)}
 				>
 					Archive
 				</button>
@@ -23,8 +26,8 @@ const Button = ({ type, id, onArchiveNote, onDeleteNote }) => {
 
 			{type === "unarchive" && (
 				<button
-					className="note-item__delete-button w-full py-2 border-r border-t text-yellow-300 font-bold"
-					onClick={() => onArchiveNote(id)}
+					className="note-item__delete-button w-full py-2  border-t text-yellow-300 font-bold"
+					onClick={() => onArchiveNoteHandler(id)}
 				>
 					Unarchive
 				</button>

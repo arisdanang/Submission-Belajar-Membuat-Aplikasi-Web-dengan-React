@@ -1,14 +1,14 @@
 import React from "react";
 import Button from "./Button";
 
-const NoteButtons = ({ archived, id, onArchiveNote, onDeleteNote }) => {
+const NoteButtons = ({ archived, id }) => {
 	return (
 		<div className="note-item__action flex bg-transparent ">
-			<Button text="Delete" type="delete" id={id} onDeleteNote={onDeleteNote} />
+			<Button text="Delete" type="delete" id={id} />
 			{archived ? (
-				<Button type="unarchive" id={id} onArchiveNote={onArchiveNote} />
+				<Button type="unarchive" id={id} />
 			) : (
-				<Button type="archive" id={id} onArchiveNote={onArchiveNote} />
+				<Button type="archive" id={id} />
 			)}
 		</div>
 	);

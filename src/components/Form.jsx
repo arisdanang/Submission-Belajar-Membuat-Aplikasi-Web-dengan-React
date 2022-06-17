@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { UseNoteContext } from "../context/NoteContext";
 
-const Form = ({ addNote }) => {
+const Form = () => {
+	const { onAddNoteHandler } = UseNoteContext();
 	const [title, setTitle] = useState("");
 	const [body, setBody] = useState("");
 	const [countChar, setCountChar] = useState(50);
@@ -18,9 +20,10 @@ const Form = ({ addNote }) => {
 		event.preventDefault();
 
 		const newNote = { title, body };
-		addNote(newNote);
+		onAddNoteHandler(newNote);
 		setTitle("");
 		setBody("");
+		setCountChar(50);
 	};
 
 	return (
