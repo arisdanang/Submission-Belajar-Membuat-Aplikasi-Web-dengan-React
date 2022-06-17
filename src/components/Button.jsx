@@ -4,12 +4,22 @@ import { UseNoteContext } from "../context/NoteContext";
 const Button = ({ type, id }) => {
 	const { onArchiveNoteHandler, onDeleteNoteHandler } = UseNoteContext();
 
+	const confirmDelete = (id) => {
+		const message = confirm("are you sure you want to delete?");
+
+		if (message) {
+			onDeleteNoteHandler(id);
+		} else {
+			return false;
+		}
+	};
+
 	return (
 		<>
 			{type === "delete" && (
 				<button
 					className="note-item__delete-button w-full py-2 border-r border-t text-red-500 font-bold hover:text-red-700"
-					onClick={() => onDeleteNoteHandler(id)}
+					onClick={() => confirmDelete(id)}
 				>
 					Delete
 				</button>
