@@ -8,7 +8,7 @@ const Button = ({ type, id }) => {
 		<>
 			{type === "delete" && (
 				<button
-					className="note-item__delete-button w-full py-2 border-r border-t text-red-500 font-bold"
+					className="note-item__delete-button w-full py-2 border-r border-t text-red-500 font-bold hover:text-red-700"
 					onClick={() => onDeleteNoteHandler(id)}
 				>
 					Delete
@@ -17,7 +17,7 @@ const Button = ({ type, id }) => {
 
 			{type === "archive" && (
 				<button
-					className="note-item__archive-button w-full py-2  border-t text-yellow-300 font-bold"
+					className="note-item__archive-button w-full py-2  border-t text-yellow-300 font-bold hover:text-yellow-500"
 					onClick={() => onArchiveNoteHandler(id)}
 				>
 					Archive
@@ -26,7 +26,7 @@ const Button = ({ type, id }) => {
 
 			{type === "unarchive" && (
 				<button
-					className="note-item__delete-button w-full py-2  border-t text-yellow-300 font-bold"
+					className="note-item__delete-button w-full py-2  border-t text-yellow-300 font-bold hover:text-yellow-500"
 					onClick={() => onArchiveNoteHandler(id)}
 				>
 					Unarchive
