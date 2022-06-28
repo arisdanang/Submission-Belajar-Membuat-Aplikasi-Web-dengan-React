@@ -36,10 +36,10 @@ Install dependencies
 Start the app
 
 ```bash
-  npm start
+  npm
 ```
 
 ## Preview
 
-![Dekstop](/screenshot/dekstop.png)
+![Desktop](/screenshot/desktop.png)
 ![Mobile](/screenshot/mobile.png)
