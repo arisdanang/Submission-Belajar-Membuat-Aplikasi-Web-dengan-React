@@ -44,7 +44,7 @@ Install dependencies
 Start the app
 
 ```bash
-  npm
+  npm start
 ```
 
 ## Preview
