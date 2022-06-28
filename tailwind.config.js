@@ -7,7 +7,7 @@ module.exports = {
 				"dark-secondary": "#64748b",
 			},
 			fontFamily: {
-				inter: ["Inter"],
+				inter: ["Inter", "sans-serif"],
 			},
 			gridTemplateColumns: {
 				"1fr": "1fr",
