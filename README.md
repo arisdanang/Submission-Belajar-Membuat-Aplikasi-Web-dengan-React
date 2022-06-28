@@ -9,6 +9,14 @@ this is my submission on class [Belajar Membuat Aplikasi Web dengan React](https
 - `Context API`
 - `Local Storage`
 
+## Features
+
+- Add note
+- Delete note
+- Search Note
+- The note will be saved locally.
+- archive / unarchive note
+
 ## Demo
 
 [Demo Website](https://react-note-app-kappa.vercel.app/)
