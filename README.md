@@ -49,5 +49,10 @@ Start the app
 
 ## Preview
 
+## Desktop
+
 ![Desktop](/screenshot/desktop.png)
+
+## Mobile
+
 ![Mobile](/screenshot/mobile.png)
