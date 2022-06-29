@@ -13,7 +13,7 @@ const NotesCategory = ({ notes, type }) => {
 			) : (
 				<h2 className="text-2xl my-4">Unarchive Notes</h2>
 			)}
-			<div className="grid grid-cols-1fr sm:grid-cols-2fr md:grid-cols-3fr lg:grid-cols-4 gap-4">
+			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 				{type === "archive" ? (
 					<NotesList notes={archiveNotes} />
 				) : (
